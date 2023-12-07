@@ -28,7 +28,7 @@ run-command-to-fail - Tool to run command in cycle to check fail.
 
 =head1 SYNOPSIS
 
- run-command-to-fail [-h] [--version]
+ run-command-to-fail [-h] [-l] [-n cycles] [-p preset] [--version]
 
 =head1 ARGUMENTS
 
@@ -38,15 +38,53 @@ run-command-to-fail - Tool to run command in cycle to check fail.
 
 Print help.
 
+=item * C<-l>
+
+List presets.
+
+=item * C<-n cycles>
+
+Number of cycles.
+
+Default value is 100 cycles.
+
+=item * C<-p preset>
+
+Preset for run.
+
+Default value is 'perl'.
+
 =item * C<--version>
 
 Print version of script.
 
 =back
 
+=head1 ACTUAL PRESETS
+
+=over
+
+=item C<blank>
+
+Clean preset. User could run anything, what want.
+
+=item C<perl>
+
+Perl preset.
+
+One argument is required, it's Perl file to run.
+
+=item C<strace_perl>
+
+Perl preset with strace processing.
+
+One argument is required, it's Perl file to run.
+
+=back
+
 =head1 EXAMPLE
 
- run-command-to-fail TODO
+ run-command-to-fail -n 10 -p blank true
 
 =head1 REPOSITORY
 
