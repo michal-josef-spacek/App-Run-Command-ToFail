@@ -7,6 +7,10 @@ use Getopt::Std;
 use Readonly;
 
 Readonly::Hash our %PRESETS => (
+	'blank' => [
+		0,
+		'',
+	],
 	'perl' => [
 		1,
 		'perl %s',
