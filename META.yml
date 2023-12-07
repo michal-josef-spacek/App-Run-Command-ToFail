@@ -24,6 +24,7 @@ meta-spec:
 name: App-Run-Command-ToFail
 no_index:
   directory:
+    - examples
     - inc
     - t
     - xt

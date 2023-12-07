@@ -126,26 +126,34 @@ Returns 1 for error, 0 for success.
 
 =head1 EXAMPLE
 
-=for comment filename=search_library.pl
+=for comment filename=run_perl_command.pl
 
  use strict;
  use warnings;
 
  use App::Run::Command::ToFail;
- use File::Temp;
+ use File::Temp qw(tempfile);
+ use IO::Barf qw(barf);
 
- # TODO
+ my (undef, $tmp_file) = tempfile();
+ barf($tmp_file, <<'END');
+ use strict;
+ use warnings;
+
+ print ".";
+ END
 
  # Arguments.
  @ARGV = (
-         # TODO
+         '-n 10',
+         $tmp_file,
  );
 
  # Run.
  exit App::Run::Command::ToFail->new->run;
 
  # Output like:
- # TODO
+ # ..........Everything is ok.
 
 =head1 DEPENDENCIES
 
