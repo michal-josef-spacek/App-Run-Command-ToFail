@@ -1,0 +1,34 @@
+NAME
+    run-command-to-fail - Tool to run command in cycle to check fail.
+
+SYNOPSIS
+     run-command-to-fail [-h] [--version]
+
+ARGUMENTS
+    *       "-h"
+
+            Print help.
+
+    *       "--version"
+
+            Print version of script.
+
+EXAMPLE
+     run-command-to-fail TODO
+
+REPOSITORY
+    <https://github.com/michal-josef-spacek/App-Run-Command-ToFail>
+
+AUTHOR
+    Michal Josef Špaček <mailto:skim@cpan.org>
+
+    <http://skim.cz>
+
+LICENSE AND COPYRIGHT
+    © 2023 Michal Josef Špaček
+
+    BSD 2-Clause License
+
+VERSION
+    0.01
+
