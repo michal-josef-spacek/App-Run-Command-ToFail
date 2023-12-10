@@ -37,7 +37,8 @@ stderr_is(
 
 # Test.
 @ARGV = (
-	'-n 10',
+	'-n',
+	10,
 	File::Object->new->up->dir('data')->file('test_ok.pl')->s,
 	10,
 );
@@ -55,7 +56,8 @@ stdout_is(
 
 # Test.
 @ARGV = (
-	'-n 10',
+	'-n',
+	10,
 	File::Object->new->up->dir('data')->file('test_fail.pl')->s,
 	10,
 	5,
