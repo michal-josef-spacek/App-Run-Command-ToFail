@@ -1,3 +1,5 @@
+0.03
+
 0.02 2023-12-10T12:07:23+01:00
  - Add check for preset values.
  - Fix @ARGV in test.
