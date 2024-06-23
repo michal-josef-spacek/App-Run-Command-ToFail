@@ -13,19 +13,7 @@ use Test::Output;
 @ARGV = (
 	'-h',
 );
-my $script = abs2rel(File::Object->new->file('04-run.t')->s);
-# XXX Hack for missing abs2rel on Windows.
-if ($OSNAME eq 'MSWin32') {
-	$script =~ s/\\/\//msg;
-}
-my $right_ret = <<"END";
-Usage: $script [-h] [-l] [-n cycles] [-p preset] [--version]
-	-h		Print help.
-	-l		List presets.
-	-n cycles	Number of cycles (default is 100).
-	-p preset	Preset for run (default is perl).
-	--version	Print version.
-END
+my $right_ret = help();
 stderr_is(
 	sub {
 		App::Run::Command::ToFail->new->run;
@@ -76,3 +64,21 @@ stderr_is(
 	$right_ret,
 	'Run test, which is failing (10x run, fail in 5 round).',
 );
+
+sub help {
+	my $script = abs2rel(File::Object->new->file('04-run.t')->s);
+	# XXX Hack for missing abs2rel on Windows.
+	if ($OSNAME eq 'MSWin32') {
+		$script =~ s/\\/\//msg;
+	}
+	my $help = <<"END";
+Usage: $script [-h] [-l] [-n cycles] [-p preset] [--version]
+	-h		Print help.
+	-l		List presets.
+	-n cycles	Number of cycles (default is 100).
+	-p preset	Preset for run (default is perl).
+	--version	Print version.
+END
+
+	return $help;
+}
