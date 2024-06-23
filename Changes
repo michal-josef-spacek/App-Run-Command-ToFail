@@ -1,4 +1,4 @@
-0.03
+0.03 2024-06-23T12:53:42+02:00
  - Add tests.
  - Fix print to STDERR for error.
  - Rewrite run() test to use help() helper.
