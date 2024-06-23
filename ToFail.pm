@@ -69,7 +69,7 @@ sub run {
 	}
 
 	if ($PRESETS{$self->{'_opts'}->{'p'}}[0] > @ARGV) {
-		print 'Wrong number of arguments (need '.$PRESETS{$self->{'_opts'}->{'p'}}[0].
+		print STDERR 'Wrong number of arguments (need '.$PRESETS{$self->{'_opts'}->{'p'}}[0].
 			" for command '".$PRESETS{$self->{'_opts'}->{'p'}}[1]."').\n";
 		return 1;
 	}
