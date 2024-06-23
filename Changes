@@ -1,4 +1,5 @@
 0.03
+ - Add tests.
  - Fix print to STDERR for error.
  - Rewrite run() test to use help() helper.
  - Update copyright years.
