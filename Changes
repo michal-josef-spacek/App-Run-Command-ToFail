@@ -1,4 +1,5 @@
 0.04
+ - Add name of state file to arguments in test command.
  - Fix EXAMPLE in doc. Fix to real @ARGS.
  - Move code to construct command outside of cycle.
 
