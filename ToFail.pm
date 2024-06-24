@@ -155,7 +155,7 @@ Returns 1 for error, 0 for success.
 
  # Arguments.
  @ARGV = (
-         '-n 10',
+         '-n', '10',
          $tmp_file,
  );
 
