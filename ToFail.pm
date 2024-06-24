@@ -74,18 +74,18 @@ sub run {
 		return 1;
 	}
 
-	foreach my $i (1 .. $self->{'_opts'}->{'n'}) {
-		my @preset_args;
-		my @other_args;
-		for (my $i = 0; $i < @ARGV; $i++) {
-			if ($i + 1 <= $PRESETS{$self->{'_opts'}->{'p'}}[0]) {
-				push @preset_args, $ARGV[$i];
-			} else {
-				push @other_args, $ARGV[$i];
-			}
+	my @preset_args;
+	my @other_args;
+	for (my $i = 0; $i < @ARGV; $i++) {
+		if ($i + 1 <= $PRESETS{$self->{'_opts'}->{'p'}}[0]) {
+			push @preset_args, $ARGV[$i];
+		} else {
+			push @other_args, $ARGV[$i];
 		}
-		my $command = sprintf $PRESETS{$self->{'_opts'}->{'p'}}[1], @preset_args;
-		$command .= ' '.(join ' ', @other_args);
+	}
+	my $command = sprintf $PRESETS{$self->{'_opts'}->{'p'}}[1], @preset_args;
+	$command .= ' '.(join ' ', @other_args);
+	foreach my $i (1 .. $self->{'_opts'}->{'n'}) {
 		my $ret = system $command;
         	if ($ret > 1) {
                 	print STDERR "Exited in $i round with exit code $ret.\n";
