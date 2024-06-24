@@ -22,7 +22,11 @@ END
 );
 
 # Run.
-exit App::Run::Command::ToFail->new->run;
+my $exit = App::Run::Command::ToFail->new->run;
+
+unlink $tmp_file;
+
+exit $exit;
 
 # Output like:
 # ..........Everything is ok.

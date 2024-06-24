@@ -160,7 +160,11 @@ Returns 1 for error, 0 for success.
  );
 
  # Run.
- exit App::Run::Command::ToFail->new->run;
+ my $exit = App::Run::Command::ToFail->new->run;
+
+ unlink $tmp_file;
+
+ exit $exit;
 
  # Output like:
  # ..........Everything is ok.
