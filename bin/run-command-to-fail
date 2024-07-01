@@ -30,6 +30,12 @@ run-command-to-fail - Tool to run command in cycle to check fail.
 
  run-command-to-fail [-h] [-l] [-n cycles] [-p preset] [--version]
 
+=head1 DESCRIPTION
+
+The debugging tool for the cyclic run of user command to detect random fail.
+
+The tool has some predefined behaviors like perl and perl with strace.
+
 =head1 ARGUMENTS
 
 =over 8
