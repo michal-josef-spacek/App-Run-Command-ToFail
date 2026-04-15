@@ -1,6 +1,5 @@
 TODO
 ====
-1. Improve tests.
 3. Add possibility of presets from configuration file.
 4. Add timeout option to maximum timeout to run.
 5.
@@ -9,3 +8,6 @@ Applied
 =======
 2. Describe intent to doc.
 OK [20240701] skim
+
+1. Improve tests.
+OK [20260415] skim
