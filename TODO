@@ -2,7 +2,8 @@ TODO
 ====
 1. Improve tests.
 3. Add possibility of presets from configuration file.
-4.
+4. Add timeout option to maximum timeout to run.
+5.
 
 Applied
 =======
