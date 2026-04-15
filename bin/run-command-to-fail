@@ -92,6 +92,16 @@ One argument is required, it's Perl file to run.
 
  run-command-to-fail -n 10 -p blank true
 
+=head1 SEE ALSO
+
+=over
+
+=item L<quicktest>
+
+Run prove repeatedly until failure.
+
+=back
+
 =head1 REPOSITORY
 
 L<https://github.com/michal-josef-spacek/App-Run-Command-ToFail>
